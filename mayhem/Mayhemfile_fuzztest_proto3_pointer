@@ -1,0 +1,10 @@
+project: savantenvs/nanopb
+target: fuzztest_proto3_pointer
+
+cmds:
+  - cmd: /mayhem/fuzztest_proto3_pointer
+    libfuzzer: true
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzztest_proto3_pointer/testsuite
